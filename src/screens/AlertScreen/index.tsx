@@ -22,6 +22,17 @@ export const AlertScreen = () => {
     );
   };
 
+  const showPrompt = () => {
+    Alert.prompt(
+      '¿Está seguro?',
+      'Esta acción no se puede revertir',
+      (valor: string) => console.log(`Info: ${valor}`),
+      'plain-text',
+      'Hola Mundo',
+      'number-pad',
+    );
+  };
+
   return (
     <View style={styles.globalMargin}>
       <HeaderTitle title="Alerts" />

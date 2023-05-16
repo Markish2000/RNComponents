@@ -22,6 +22,7 @@ export const AlertScreen = () => {
     );
   };
 
+  //!! SÓLO ANDA EN IOS.
   const showPrompt = () => {
     Alert.prompt(
       '¿Está seguro?',

@@ -1,10 +1,11 @@
 import {createStackNavigator} from '@react-navigation/stack';
 
+import {HomeScreen} from '../screens/HomeScreen';
+import {AlertScreen} from '../screens/AlertScreen';
+import {SwitchScreen} from '../screens/SwitchScreen';
+import {TextInputScreen} from '../screens/TextInputScreen';
 import {Animation101Screen} from '../screens/Animation101Screen';
 import {Animation102Screen} from '../screens/Animation102Screen';
-import {SwitchScreen} from '../screens/SwitchScreen';
-import {AlertScreen} from '../screens/AlertScreen';
-import {HomeScreen} from '../screens/HomeScreen';
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,7 @@ export const Navigator = () => {
       <Stack.Screen name="Animation102Screen" component={Animation102Screen} />
       <Stack.Screen name="SwitchScreen" component={SwitchScreen} />
       <Stack.Screen name="AlertScreen" component={AlertScreen} />
+      <Stack.Screen name="TextInputScreen" component={TextInputScreen} />
     </Stack.Navigator>
   );
 };

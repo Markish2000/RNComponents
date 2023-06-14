@@ -1,7 +1,9 @@
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+
 import {useNavigation} from '@react-navigation/core';
 
 import {MenuItem} from '../../interfaces/appInterfaces';
+
 import Icon from 'react-native-vector-icons/Ionicons';
 
 interface Props {

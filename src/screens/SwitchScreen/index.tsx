@@ -1,8 +1,9 @@
+import {useState} from 'react';
+
 import {View, Text, StyleSheet} from 'react-native';
 
 import {CustomSwitch} from '../../components/CustomSwitch';
 import {HeaderTitle} from '../../components/HeaderTitle';
-import {useState} from 'react';
 
 export const SwitchScreen = () => {
   const [state, setState] = useState({

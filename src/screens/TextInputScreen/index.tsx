@@ -8,10 +8,10 @@ import {
   Text,
 } from 'react-native';
 
-import {useForm} from '../../hooks/useForm';
-
 import {CustomSwitch} from '../../components/CustomSwitch';
 import {HeaderTitle} from '../../components/HeaderTitle';
+
+import {useForm} from '../../hooks/useForm';
 
 import {styles} from '../../theme/appTheme';
 

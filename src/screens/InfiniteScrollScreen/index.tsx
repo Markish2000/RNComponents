@@ -1,13 +1,6 @@
 import {useState} from 'react';
 
-import {
-  ActivityIndicator,
-  FlatList,
-  Image,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import {ActivityIndicator, FlatList, View} from 'react-native';
 
 import {HeaderTitle} from '../../components/HeaderTitle';
 import {FadeInImage} from '../../components/FadeInImage';

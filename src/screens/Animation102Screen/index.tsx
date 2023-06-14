@@ -1,4 +1,5 @@
 import {useRef} from 'react';
+
 import {Animated, PanResponder, View, StyleSheet} from 'react-native';
 
 export const Animation102Screen = () => {

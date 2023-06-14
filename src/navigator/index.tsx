@@ -1,15 +1,16 @@
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {HomeScreen} from '../screens/HomeScreen';
-import {AlertScreen} from '../screens/AlertScreen';
-import {ModalScreen} from '../screens/ModalScreen';
-import {SwitchScreen} from '../screens/SwitchScreen';
-import {TextInputScreen} from '../screens/TextInputScreen';
-import {Animation101Screen} from '../screens/Animation101Screen';
-import {Animation102Screen} from '../screens/Animation102Screen';
-import {PullToRefreshScreen} from '../screens/PullToRefreshScreen';
-import {InfiniteSCrollScreen} from '../screens/InfiniteScrollScreen';
 import {CustomSectionListScreen} from '../screens/CustomSectionListScreen';
+import {InfiniteSCrollScreen} from '../screens/InfiniteScrollScreen';
+import {PullToRefreshScreen} from '../screens/PullToRefreshScreen';
+import {Animation102Screen} from '../screens/Animation102Screen';
+import {Animation101Screen} from '../screens/Animation101Screen';
+import {TextInputScreen} from '../screens/TextInputScreen';
+import {SwitchScreen} from '../screens/SwitchScreen';
+import {SlidesScreen} from '../screens/SlidesScreen';
+import {ModalScreen} from '../screens/ModalScreen';
+import {AlertScreen} from '../screens/AlertScreen';
+import {HomeScreen} from '../screens/HomeScreen';
 
 const Stack = createStackNavigator();
 
@@ -39,6 +40,7 @@ export const Navigator = () => {
         name="InfiniteScrollScreen"
         component={InfiniteSCrollScreen}
       />
+      <Stack.Screen name="SlidesScreen" component={SlidesScreen} />
     </Stack.Navigator>
   );
 };

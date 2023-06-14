@@ -1,3 +1,5 @@
+import {useState} from 'react';
+
 import {
   ActivityIndicator,
   Animated,
@@ -7,7 +9,6 @@ import {
 } from 'react-native';
 
 import {useAnimation} from '../../hooks/useAnimation';
-import {useState} from 'react';
 
 interface Props {
   uri: string;

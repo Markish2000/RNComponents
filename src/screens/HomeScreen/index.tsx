@@ -1,17 +1,14 @@
 import {FlatList, View} from 'react-native';
 
-import {FlatListMenuItem} from '../../components/FlatListMenuItem';
-
 import {menuItems} from '../../data/menuItems';
 
-import {styles} from '../../theme/appTheme';
+import {FlatListMenuItem} from '../../components/FlatListMenuItem';
+import {ItemSeparator} from '../../components/ItemSeparator';
 import {HeaderTitle} from '../../components/HeaderTitle';
 
-export const HomeScreen = () => {
-  const itemSeparator = () => (
-    <View style={{borderBottomWidth: 1, opacity: 0.4, marginVertical: 8}} />
-  );
+import {styles} from '../../theme/appTheme';
 
+export const HomeScreen = () => {
   return (
     <View style={{flex: 1, ...styles.globalMargin}}>
       <FlatList
@@ -19,7 +16,7 @@ export const HomeScreen = () => {
         renderItem={({item}) => <FlatListMenuItem menuItem={item} />}
         keyExtractor={item => item.name}
         ListHeaderComponent={() => <HeaderTitle title="Opciones de menú" />}
-        ItemSeparatorComponent={itemSeparator}
+        ItemSeparatorComponent={() => <ItemSeparator />}
       />
     </View>
   );

@@ -1,10 +1,12 @@
-import {useState} from 'react';
+import {useContext, useState} from 'react';
 
 import {View, ScrollView, RefreshControl} from 'react-native';
 
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import {HeaderTitle} from '../../components/HeaderTitle';
+
+import {ThemeContext} from '../../context/ThemeContext';
 
 import {styles} from '../../theme/appTheme';
 
@@ -13,11 +15,13 @@ export const PullToRefreshScreen = () => {
   const [data, setData] = useState<string>();
 
   const {top} = useSafeAreaInsets();
+  const {
+    theme: {colors, dividerColor, dark},
+  } = useContext(ThemeContext);
 
   const onRefresh = () => {
     setRefreshing(true);
     setTimeout(() => {
-      console.log('Terminamos');
       setRefreshing(false);
       setData('Hola Mundo');
     }, 1500);
@@ -32,11 +36,11 @@ export const PullToRefreshScreen = () => {
           onRefresh={onRefresh}
           progressViewOffset={10}
           //!! SOLO EN ANDROID
-          progressBackgroundColor="#5856D6"
-          colors={['white', 'red', 'orage']}
+          progressBackgroundColor={dividerColor}
+          colors={[colors.text]}
           //!! SOLO EN IOS
-          style={{backgroundColor: '#5856D6'}}
-          tintColor="white"
+          // style={{backgroundColor: '#5856D6'}}
+          tintColor={dark ? 'white' : 'black'}
         />
       }>
       <View style={styles.globalMargin}>
